@@ -3,11 +3,13 @@ package Hojas de trabajo.HDT 4;
 public class Main {
     public static void main(String[] args) {
 
-        Stack<Integer> stack = new ArrayListStack<>();
+        SimpleList<Integer> lista = new SimpleList<>();
 
-        stack.push(10);
-        stack.push(20);
+        lista.add(10);
+        lista.add(20);
+        lista.add(30);
 
-        System.out.println(stack.pop()); // debería imprimir 20
+        System.out.println(lista.removeLast()); // 30
+        System.out.println(lista.getLast());    // 20
     }
 }
