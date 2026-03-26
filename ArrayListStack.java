@@ -1,5 +1,4 @@
-package Hojas de trabajo.HDT 4;
-
+// package Hojas de trabajo.HDT 4;
 import java.util.ArrayList;
 
 public class ArrayListStack<T> extends AbstractStack<T> {
@@ -12,13 +11,15 @@ public class ArrayListStack<T> extends AbstractStack<T> {
     }
 
     public T pop() {
-        if (isEmpty()) return null;
+        if (isEmpty())
+            return null;
         size--;
         return data.remove(data.size() - 1);
     }
 
     public T peek() {
-        if (isEmpty()) return null;
+        if (isEmpty())
+            return null;
         return data.get(data.size() - 1);
     }
 

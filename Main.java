@@ -1,15 +1,14 @@
-package Hojas de trabajo.HDT 4;
+// package Hojas de trabajo.HDT 4;
 
 public class Main {
     public static void main(String[] args) {
 
-        SimpleList<Integer> lista = new SimpleList<>();
+        Stack<Character> stack = new ArrayListStack<>();
 
-        lista.add(10);
-        lista.add(20);
-        lista.add(30);
+        String infix = "(10+20)*9";
 
-        System.out.println(lista.removeLast()); // 30
-        System.out.println(lista.getLast());    // 20
+        String postfix = Converter.infixToPostfix(infix, stack);
+
+        System.out.println("Postfix: " + postfix);
     }
 }

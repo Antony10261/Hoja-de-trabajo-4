@@ -1,5 +1,4 @@
-package Hojas de trabajo.HDT 4;
-
+// package Hojas de trabajo.HDT 4;
 public class Node<T> {
     T value;
     Node<T> next;

@@ -1,5 +1,4 @@
-package Hojas de trabajo.HDT 4;
-
+// package Hojas de trabajo.HDT 4;
 public class SimpleList<T> implements ListADT<T> {
 
     private Node<T> head;
@@ -11,7 +10,7 @@ public class SimpleList<T> implements ListADT<T> {
             head = nuevo;
         } else {
             Node<T> temp = head;
-            while (temp.next != null) { // ineficiente pero aceptable
+            while (temp.next != null) { // quitar
                 temp = temp.next;
             }
             temp.next = nuevo;
@@ -19,7 +18,8 @@ public class SimpleList<T> implements ListADT<T> {
     }
 
     public T removeLast() {
-        if (head == null) return null;
+        if (head == null)
+            return null;
 
         if (head.next == null) {
             T val = head.value;
@@ -38,7 +38,8 @@ public class SimpleList<T> implements ListADT<T> {
     }
 
     public T getLast() {
-        if (head == null) return null;
+        if (head == null)
+            return null;
 
         Node<T> temp = head;
         while (temp.next != null) {
