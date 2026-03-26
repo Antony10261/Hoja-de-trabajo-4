@@ -1,20 +1,19 @@
+import java.util.Vector;
 
-// package Hojas de trabajo.HDT 4;
-import java.util.ArrayList;
+public class VectorStack<T> extends AbstractStack<T> {
 
-public class ArrayListStack<T> extends AbstractStack<T> {
-
-    private ArrayList<T> data = new ArrayList<>();
+    private Vector<T> data = new Vector<>();
 
     public void push(T value) {
         data.add(value);
         size++;
     }
 
-    public T pop() {
+    public T pop() { // corejir el pop
         if (isEmpty())
             return null;
         size--;
+
         return data.remove(data.size() - 1);
     }
 

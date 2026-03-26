@@ -36,7 +36,7 @@ public class SimpleList<T> implements ListADT<T> {
         temp.next = null;
         return val;
     }
-
+//
     public T getLast() {
         if (head == null)
             return null;

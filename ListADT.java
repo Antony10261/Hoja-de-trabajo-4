@@ -7,4 +7,4 @@ public interface ListADT<T> {
     T getLast();
 
     boolean isEmpty();
-}
+} //modificar

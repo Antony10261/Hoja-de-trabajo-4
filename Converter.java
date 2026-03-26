@@ -6,10 +6,18 @@ public class Converter {
 
         for (int i = 0; i < exp.length(); i++) {
             char c = exp.charAt(i);
-
+                //corregido
             if (Character.isDigit(c)) {
-                resultado += c + " ";
-            } else if (c == '(') {
+    String numero = "";
+
+    while (i < exp.length() && Character.isDigit(exp.charAt(i))) {
+        numero += exp.charAt(i);
+        i++;
+    }
+
+    i--; // retrocede porque el for incrementa
+    resultado += numero + " ";
+}else if (c == '(') {
                 stack.push(c);
             } else if (c == ')') {
                 while (!stack.isEmpty() && stack.peek() != '(') {
